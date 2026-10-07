@@ -1,0 +1,5 @@
+# 本插件随包自带的 patch：把宿主行插进 profile。
+# 必须用 - insert: 明确插入；直接写 - id / name 会被当成「改一个不存在的条目」而静默不挂载。
+- insert:
+    - id: dsh-restart
+      name: '@119-svg/dsh-restart'

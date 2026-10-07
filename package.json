@@ -1,0 +1,60 @@
+{
+  "name": "@119-svg/dsh-restart",
+  "version": "0.1.0",
+  "description": "One-click full restart of DSH Desktop: exactly the same effect as quitting from the tray and opening it again. / 一键整机重启 DSH Desktop，效果等同托盘退出后重新打开。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "restart",
+    "desktop",
+    "windows",
+    "relaunch"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    },
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/119-svg/dsh-restart.git"
+  },
+  "homepage": "https://github.com/119-svg/dsh-restart#readme",
+  "bugs": {
+    "url": "https://github.com/119-svg/dsh-restart/issues"
+  }
+}
